@@ -43,7 +43,7 @@ namespace Logging
         private int _logID;
 
         /// <summary>
-        ///     Stores the timestamp when the log entry has been made
+        ///     Stores the time stamp when the log entry has been made
         /// </summary>
         private DateTime _logTimeStamp;
 
@@ -109,13 +109,13 @@ namespace Logging
 
         #endregion Properties
 
-        #region Methodes
+        #region Methods
 
         /// <summary>
         ///     This is the constructor for the log entry object
         /// </summary>
         /// <param name="id">ID for the entry</param>
-        /// <param name="timeStamp">Timestamp of the entry</param>
+        /// <param name="timeStamp">Times tamp of the entry</param>
         /// <param name="state">State of the entry (e.g. Info)</param>
         /// <param name="componentName">Name of the entry creation component</param>
         /// <param name="color">Color for showing the entry</param>
@@ -132,8 +132,8 @@ namespace Logging
 
         /// <summary>
         ///     This is the constructor for the log entry object
-        ///     without giving a timestamp for the log entry.
-        ///     The timestamp is set to the current time.
+        ///     without giving a time stamp for the log entry.
+        ///     The time stamp is set to the current time.
         /// </summary>
         /// <param name="id">ID for the entry</param>
         /// <param name="state">State of the entry (e.g. Info)</param>

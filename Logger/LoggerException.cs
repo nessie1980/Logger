@@ -61,7 +61,7 @@ namespace Logging
 
         #endregion Properties
 
-        #region Methodes
+        #region Methods
 
         /// <summary>
         ///     Constructor

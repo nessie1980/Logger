@@ -317,7 +317,7 @@ namespace Logging
 
         #endregion Properties
 
-        #region Methodes
+        #region Methods
 
         /// <summary>
         ///     This function initialized the logger
@@ -388,7 +388,7 @@ namespace Logging
                                             if (!Directory.Exists(LoggerPath))
                                                 Directory.CreateDirectory(LoggerPath);
 
-                                            // Check if the creation was successfull
+                                            // Check if the creation was successful
                                             if (!Directory.Exists(LoggerPath))
                                             {
                                                 InitState = EInitState.LogPathCreationFailed;
@@ -515,7 +515,7 @@ namespace Logging
         /// <param name="logMessage">Message of the log entry</param>
         /// <param name="logStateId">State id of the log entry</param>
         /// <param name="logComponentNameId">ComponentName id of the log entry</param>
-        /// <exception cref="LoggerException">Catched logger excepetion</exception>
+        /// <exception cref="LoggerException">Caught logger exception</exception>
         public void AddEntry(string logMessage, ELoggerStateLevels logStateId = 0, ELoggerComponentLevels logComponentNameId = 0)
         {
             try
@@ -557,7 +557,7 @@ namespace Logging
 
                 // Get state name
                 string logStateIdValue = @"-";
-                // Check if states exsists
+                // Check if states exists
                 if (LoggerStatesList != null && indexStateList > 0)
                 {
                     if (LoggerStatesList.Count >= indexStateList)
@@ -603,7 +603,7 @@ namespace Logging
                         LogEntry entry = new LogEntry(ID, timeStamp, logStateIdValue, logComponentNameIdValue, logColorValue,
                             logMessage);
 
-                        // Check if the maximum size of the list has been reached and then remove the frist element in the list
+                        // Check if the maximum size of the list has been reached and then remove the first element in the list
                         if (_logEntryList.Count >= LoggerSize)
                         {
                             _logEntryList.RemoveAt(0);
@@ -629,7 +629,7 @@ namespace Logging
                                 {
                                     LoggerState = ELoggerState.NewEntryAddFailed;
                                     throw (new LoggerException(InitState, LoggerState,
-                                        @"Writting log entry failed."));
+                                        @"Writing log entry failed."));
                                 }
                             }
                         }
@@ -679,7 +679,7 @@ namespace Logging
         }
 
         /// <summary>
-        ///     This function retrievs the color of the given state level
+        ///     This function retrieves the color of the given state level
         ///     If the state level is invalid the color "Black" is given
         /// </summary>
         /// <param name="stateLevel"></param>
@@ -716,7 +716,7 @@ namespace Logging
         ///     This function write the log entry to the file
         /// </summary>
         /// <param name="stream">Stream for the log file</param>
-        /// <param name="logEntry">Log entry which should be writen</param>
+        /// <param name="logEntry">Log entry which should be written</param>
         /// <returns></returns>
         internal bool WriteLogEntry(StreamWriter stream, LogEntry logEntry)
         {
@@ -743,7 +743,7 @@ namespace Logging
         ///     deletes the other.
         /// </summary>
         /// <param name="iStoredLogFiles">Value of the kept log files</param>
-        /// <exception cref="LoggerException">Catched logger excepetion</exception>
+        /// <exception cref="LoggerException">Caught logger exception</exception>
         /// <returns>Value of the deleted log files.</returns>
         public int CleanUpLogFiles(int iStoredLogFiles )
         {
